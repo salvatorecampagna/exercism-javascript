@@ -1,4 +1,4 @@
-function encodeChar(c, n) {
+const encodeChar = (c, n) => {
   if (n > 1) {
     return `${n}${c}`;
   } 
@@ -25,11 +25,11 @@ export const encode = (str) => {
   return result + encodeChar(str.charAt(i - 1), count);
 };
 
-function isDigit(c) {
+const isDigit = (c) => {
   return (c >= '0' && c <= '9');
 }
 
-function decodeChar(c, n) {
+const decodeChar = (c, n) => {
   var str = "";
 
   if (n === 0) {
