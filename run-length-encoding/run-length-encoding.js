@@ -1,5 +1,3 @@
-import { StringDecoder } from "string_decoder";
-
 function encodeChar(c, n) {
   if (n > 1) {
     return `${n}${c}`;
