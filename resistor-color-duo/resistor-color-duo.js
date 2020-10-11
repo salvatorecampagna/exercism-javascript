@@ -12,10 +12,7 @@ const COLORS = [
 ];
 
 export const decodedValue = (colors) => {
-  var value = 0
-  for (let i = 0; i < 2; i++) {
-    value = value * 10 + COLORS.indexOf(colors[i]);
-  }
-
-  return value;
+  return colors.slice(0, 2).reduce((total, value) => {
+    return total * 10 + COLORS.indexOf(value);
+  }, 0);
 };
